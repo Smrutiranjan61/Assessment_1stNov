@@ -13,7 +13,6 @@ docker build -t poc/sample-python-app .
 # tag the image appropriately
 docker tag poc/sample-python-app:latest <aws-account-id>.dkr.ecr.<region>.amazonaws.com/poc/sample-python-app:latest
 
-
 # push the image to the ecr repo
 docker push <aws-account-id>.dkr.ecr.<region>.amazonaws.com/poc/sample-python-app:latest
 
