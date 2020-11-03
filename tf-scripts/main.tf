@@ -1,6 +1,6 @@
 provider "aws" {
-    region = "us-east-1"
-  
+    region = var.region
+
 }
 
 # ALB
@@ -18,7 +18,7 @@ resource "aws_lb" "poc_lb" {
   }
 }
 
-# ALB Target Group 
+# ALB Target Group
 
 resource "aws_lb_target_group" "ip_tg" {
   name        = "poc-lb-tg"
@@ -110,13 +110,13 @@ resource "aws_ecs_service" "svc" {
   desired_count   = 1
   launch_type     = "FARGATE"
   platform_version = "LATEST"
- 
+
 
   network_configuration {
     subnets = var.public_subnets
     assign_public_ip = true
     security_groups = var.security_groups
-	
+
   }
 
   load_balancer {
