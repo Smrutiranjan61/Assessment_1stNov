@@ -16,12 +16,13 @@ This Terraform module creates an AWS ECS cluster, ALB and IAM role for the ECS t
 * VPC ID
 * 2 (min) pubic subnets (List of strings). For eg. ["subnet1-xxxx", "subnet2-xxxx"]
 * (1 min) Security Groups (List of strings). For eg. ["sg-xxxx"]
-*Note: HTTP (80) port must be open in the Security Group 
+* Note: HTTP (80) port must be open in the Security Group 
 
 ## Steps to run the Terraform scripts
 
 ```
 terraform init
+terraform plan (Optionally, to see all the resources that would be created.)
 terraform apply
 
 ```
