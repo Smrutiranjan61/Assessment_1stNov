@@ -1,7 +1,5 @@
-1. Terraform to spin up a ECS cluster => In Progress
-
+1. Terraform to spin up a ECS cluster => Done
 2. Python flask app with a /version rest endpoint which returns the version => Done
 3. Dockerfile to dockerize python flask app => Done
-4. Build docker image and push it to ECR. => Done (provided the script)
-
-5. Terraform to create ECS task and alb to make the rest endpoint available over internet => In Progress
+4. Build docker image and push it to ECR. => Done
+5. Terraform to create ECS task and alb to make the rest endpoint available over internet => Done
